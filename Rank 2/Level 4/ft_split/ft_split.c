@@ -16,7 +16,7 @@ char	**ft_split(char *str)
 	int wc = 0;
 	int k = 0;
 	int i = 0;
-	int j = 0;
+	int j = 0; //init word
 
 	char **words;
 
@@ -29,7 +29,7 @@ char	**ft_split(char *str)
 		while (str[i] && (str[i] != ' ' && str[i] != '\t'))
 			i++;
 	}
-	words = (char **)malloc(sizeof(char*) * (k + 1));
+	words = (char **)malloc(sizeof(char*) * (wc + 1));
 	i=0;
 	while (str[i])
 	{
